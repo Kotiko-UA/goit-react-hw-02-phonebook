@@ -35,7 +35,7 @@ export class App extends Component {
 
   render() {
     const filterNumbers = this.state.contacts.filter(user =>
-      user.name.includes(this.state.filter)
+      user.name.toLowerCase().includes(this.state.filter.toLowerCase())
     );
     return (
       <PageWrapper>
